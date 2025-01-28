@@ -1,5 +1,8 @@
 # See ref doc in google drive for steps followed and different syntax 
 
+#define sort before main for report
+def sort_on(dict):
+    return dict["num"]
 # define main function below w/ variables defined 
 def main():
     book_path = "books/frankenstein.txt"
