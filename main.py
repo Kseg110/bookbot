@@ -1,10 +1,16 @@
-# See ref doc in google drive for steps followed
+# See ref doc in google drive for steps followed and different syntax 
 def main():
-    with open("books/frankenstein.txt") as f: 
-        file_contents = f.read()
-        print(file_contents) #print the contents of the file
-# defined function main to open and read
+    book_path = "books/frankenstein.txt"
+    text = get_book_text(book_path)
+    num_words = get_num_words(text)
+    print(f"{num_words} words found in the document")
 
-# below = standard python idiom to ensure main only runs when script is executed directly
-if __name__ == "__main__":
-    main()
+def get_num_words(text):
+    words = text.split()
+    return len(words)
+
+def get_book_text(path):
+    with open(path) as f:
+        return f.read()
+    
+main()
